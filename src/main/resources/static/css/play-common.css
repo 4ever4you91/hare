@@ -1,0 +1,438 @@
+.header__container {
+    margin: 10px 10px 10px 10px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#toggleContainerCommon {
+    border-radius: 5px;
+    background-color: lightpink;
+    width: 40px;
+    height: 40px;
+    margin: auto 0;
+    position: relative;
+}
+
+#toggleContainerCommon::after {
+    content: "";
+    width: 16px;
+    height: 2px;
+    position: absolute;
+    background-color: salmon;
+    left: 9px;
+    top: 14px;
+    box-shadow: 0 4px 0 0 salmon, 0 8px 0 0 salmon;
+}
+
+.modal__container_common {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__container_common_menu {
+    text-align: center;
+    background-color: cornsilk;
+    width: 50%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+    border-radius: 5px;
+}
+
+.management {
+    padding: 10px 10px;
+    margin: 5px 1px;
+    background-color: crimson;
+    border: 2px solid black;
+    height: 20px;
+    display: inline-block;
+    border-radius: inherit;
+}
+
+.management:active {
+    transform: translateY(1px);
+}
+
+.management.title {
+    background-color: transparent;
+    border: transparent;
+}
+
+#modalContainerCommonMenuCloseBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    margin: 5px 5px;
+    background-color: crimson;
+    border-radius: inherit;
+}
+
+.modal__container_themes {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__container_themes_list {
+    text-align: center;
+    background-color: cornsilk;
+    width: 50%;
+    max-height: 50%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: fixed;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+
+.frame__loaded_theme {
+    background-color: salmon;
+    padding: 10px 10px;
+    margin: 5px 1px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.loaded_theme {
+    width: 70%;
+    background-color: crimson;
+    border-radius: inherit;
+    margin-right: 10px;
+    z-index: 5;
+}
+
+.look_theme {
+    width: 30%;
+    text-align: center;
+    background-color: crimson;
+    border-radius: inherit;
+    margin-left: 10px;
+}
+
+.look_image {
+    width: 18px;
+    display: block;
+    margin: auto;
+}
+
+#modalContainerThemesCloseBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    margin: 5px 5px;
+    background-color: crimson;
+    border-radius: inherit;
+}
+
+.modal__container_options {
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__container_options_list {
+    text-align: center;
+    background-color: cornsilk;
+    width: 50%;
+    max-height: 50%;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    position: fixed;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+
+.loaded_option {
+    background-color: salmon;
+    padding: 10px 10px;
+    margin: 5px 1px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#modalContainerOptionsCloseBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    margin: 5px 5px;
+    background-color: crimson;
+    border-radius: inherit;
+}
+
+.modal__container_qr_code {
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__container_qr_code_list {
+    text-align: center;
+    background-color: cornsilk;
+    width: 50%;
+    max-height: 50%;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    position: fixed;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+
+.modal__container_qr_code_list * {
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#qr {
+    width: 30%;
+    height: 30%;
+}
+
+#modalContainerQrCodeCloseBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    margin: 5px 5px;
+    background-color: crimson;
+    border-radius: inherit;
+}
+
+.modal__container_login {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_login {
+    background-color: cornsilk;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 3;
+    position: fixed;
+    border-radius: 5px;
+}
+
+.container_login * {
+    width: 50%;
+    margin: 5px;
+    border-radius: 5px;
+    min-height: 40px;
+}
+
+.container_login input {
+    font-size: 30px;
+}
+
+.container_login input:focus::placeholder {
+    opacity: 0;
+}
+
+#userConnectToSessionBtn {
+    background-color: salmon;
+}
+
+.container__frame_options_round {
+    height: calc(100% - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.options__container_round {
+    height: 90%;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: safe center;
+}
+
+.options__container_round div {
+    width: 50%;
+    font-size: 200%;
+    height: 5%;
+    opacity: 80%;
+    color: white;
+    margin-bottom: 2%;
+    background-color: rgb(151, 74, 119);
+    border-color: white;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: medium;
+    padding: 20px 0;
+}
+
+#bottom_overflow_indicator {
+    position: absolute;
+    left: 12%;
+    bottom: 10%;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    display: none;
+}
+
+#bottom_overflow_indicator span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    animation: animate_bottom 1s linear infinite;
+}
+
+#bottom_overflow_indicator span:nth-child(1) {
+    top: -1vh;
+    left: -1vh;
+    animation-delay: 0.4s;
+}
+
+#bottom_overflow_indicator span:nth-child(2) {
+    top: -2vh;
+    left: -2vh;
+    animation-delay: 0.2s;
+}
+
+#bottom_overflow_indicator span:nth-child(3) {
+    top: -3vh;
+    left: -3vh;
+    animation-delay: 0s;
+}
+
+@keyframes animate_bottom {
+    0% {
+        border-color: rgb(151, 74, 119);
+        transform: translate(0, 0);
+    }
+    20% {
+        border-color: rgb(151, 74, 119);
+        transform: translate(1vh, 1vh);
+    }
+    20.1%, 100% {
+        border-color: white;
+    }
+
+}
+
+#top_overflow_indicator {
+    position: absolute;
+    left: 12%;
+    top: 10%;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    display: none;
+}
+
+#top_overflow_indicator span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    border-left: 3px solid white;
+    border-top: 3px solid white;
+    animation: animate_top 1s linear infinite;
+}
+
+#top_overflow_indicator span:nth-child(3) {
+    top: -1vh;
+    left: -1vh;
+    animation-delay: 0s;
+}
+
+#top_overflow_indicator span:nth-child(2) {
+    top: -2vh;
+    left: -2vh;
+    animation-delay: 0.2s;
+}
+
+#top_overflow_indicator span:nth-child(1) {
+    top: -3vh;
+    left: -3vh;
+    animation-delay: 0.4s;
+}
+
+@keyframes animate_top {
+    0% {
+        border-color: rgb(151, 74, 119);
+        transform: translate(0, 0);
+    }
+    20% {
+        border-color: rgb(151, 74, 119);
+        transform: translate(-1vh, -1vh);
+    }
+    20.1%, 100% {
+        border-color: white;
+    }
+
+}
+

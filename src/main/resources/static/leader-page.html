@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leader</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/play-common.css">
+    <link rel="stylesheet" href="css/leader-page.css">
+</head>
+<body>
+<div class="container__background_image">
+    <header class="header">
+        <div class="header__container">
+            <img src="image/rabbit-butterfly.jpg">
+            <div class="container__build_round">
+                <button id="buildRoundBtn">Make new round</button>
+            </div>
+            <button id="toggleContainerCommon">
+            </button>
+        </div>
+        <div class="modal__container_common">
+            <div class="modal__container_common_menu">
+                <div class="management title">Round management</div>
+                <button id="modalContainerCommonMenuCloseBtn">X</button>
+                <div class="management user">
+                    <div class="users">Users</div>
+                </div>
+                <div class="management qr">
+                    <div class="qr">QR code</div>
+                </div>
+                <div class="management theme">
+                    <div class="themes">Themes</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__container_themes">
+            <div class="modal__container_themes_list">
+                <button id="modalContainerThemesCloseBtn">X</button>
+                <div class="themes_list_title">Themes</div>
+            </div>
+        </div>
+        <div class="modal__container_options">
+            <div class="modal__container_options_list">
+                <button id="modalContainerOptionsCloseBtn">X</button>
+                <div class="options_list_title">Options</div>
+            </div>
+        </div>
+        <div class="modal__container_users">
+            <div class="modal__container_users_list">
+                <button id="modalContainerUsersCloseBtn">X</button>
+                <div class="users_list_title">Users</div>
+            </div>
+        </div>
+        <div class="modal__container_qr_code">
+            <div class="modal__container_qr_code_list">
+                <button id="modalContainerQrCodeCloseBtn">X</button>
+                <div class="qr_code_title">Session ID</div>
+                <input type="text" id="sessionIdStr" onclick="this.select()" readonly>
+                <div class="qr_code_title">Reference to current session</div>
+                <div class="container_qr">
+                    <canvas id="qr"></canvas>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container__frame_options_round">
+        <div class="options__container_round">
+        </div>
+        <div id="top_overflow_indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="bottom_overflow_indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="modal__container_login">
+        <div class="container_login">
+            <h1>Introduce yourself</h1>
+            <input type="text" placeholder="Name" id="inputLogin">
+            <button id="userConnectToSessionBtn">Connect to session</button>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+<script src="js/play-common.js"></script>
+<script src="js/leader-page.js"></script>
+<script src="js/leader-stomp.js"></script>
+</html>

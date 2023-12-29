@@ -1,0 +1,31 @@
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+.container__background_image {
+    background-image: url("../image/rabbit-butterfly.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*height: 100vh; !*1280px*!*/
+    background-position: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(255, 199, 217, 0.5);
+}
+
+.header__container {
+    margin: 10px 10px 10px 10px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}

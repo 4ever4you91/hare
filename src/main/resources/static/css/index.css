@@ -1,0 +1,92 @@
+.header__container div {
+    margin: inherit;
+    font-size: 50px;
+    font-family: "Rubik Doodle Shadow";
+    color: crimson;
+}
+
+.container__main_menu {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container__main_menu * {
+    margin: 1% 1% 1% 1%;
+    width: 50%;
+    height: 10%;
+}
+
+.container__main_menu button {
+    font-size: 7vh;
+    background-color: crimson;
+    color: white;
+    border-radius: 5px;
+    border-color: white;
+    border-style: solid;
+    border-width: medium;
+    opacity: 80%;
+}
+
+.modal__container_session_input {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_session_input {
+    background-color: cornsilk;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 3;
+    position: fixed;
+    border-radius: 5px;
+}
+
+.container_session_input * {
+    width: 50%;
+    margin: 5px;
+    border-radius: 5px;
+    min-height: 40px;
+}
+
+.container_session_input input {
+    font-size: 30px;
+}
+
+.container_session_input input:focus::placeholder {
+    opacity: 0;
+}
+
+#sessionInputConnectToSessionBtn {
+    background-color: salmon;
+}
+
+#modalContainerSessionInputCloseBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    margin: 5px 5px;
+    background-color: crimson;
+    border-radius: inherit;
+}
