@@ -7,12 +7,14 @@ spring:
       hibernate:
         default_schema: hare
   datasource:
-    password: postgres
-    username: postgres
-    url: jdbc:postgresql://localhost:5432/postgres
+    password: ${POSTGRES_PASSWORD:postgres}
+    username: ${POSTGRES_USER:postgres}
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:5432/${POSTGRES_DATABASE:postgres}
     driver-class-name: org.postgresql.Driver
   flyway:
     user: ${spring.datasource.username}
     password: ${spring.datasource.password}
     schemas: hare
+server:
+  port: 8080
 
